@@ -1,0 +1,139 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "^(hi|hello|hey|howdy|hiya)\\b",
+        "^good\\s*(morning|afternoon|evening|day)\\b",
+        "^(what'?s?\\s*up|sup)\\b",
+        "^greetings\\b",
+        "^yo\\b"
+      ],
+      "responses": [
+        "Hello! Welcome to Pizza Palace! How can I help you today?",
+        "Hi there! Welcome to Pizza Palace! Would you like to see our menu or place an order?",
+        "Hey! Thanks for choosing Pizza Palace! What can I get for you today?",
+        "Greetings! I'm your Pizza Palace assistant. Ready to order a delicious pizza?",
+        "Welcome to Pizza Palace! I'm here to help you with your pizza order!"
+      ]
+    },
+    {
+      "tag": "menu",
+      "patterns": [
+        "\\b(menu|options|choices)\\b",
+        "\\bwhat\\s*(do\\s*you|have|'?s?)\\s*(have|available|offer|on\\s*the\\s*menu)?\\b",
+        "\\b(show|see|view|give)\\s*(me)?\\s*(the)?\\s*menu\\b",
+        "\\bwhat\\s*(kind|type)s?\\s*of\\s*(pizza|food)\\b",
+        "\\b(pizza|food)\\s*(options|types|kinds|varieties)\\b"
+      ],
+      "responses": [
+        "Here's our pizza menu:\n\n**Pizzas:**\n- Margherita ($10) - Classic tomato and mozzarella\n- Pepperoni ($12) - Loaded with pepperoni\n- Hawaiian ($12) - Ham and pineapple\n- Veggie Supreme ($13) - Bell peppers, mushrooms, olives, onions\n- Meat Lovers ($14) - Pepperoni, sausage, bacon, ham\n- BBQ Chicken ($13) - Grilled chicken with BBQ sauce\n\n**Sizes:** Small (+$0), Medium (+$2), Large (+$4)\n\nWhat would you like to order?",
+        "Our delicious pizzas:\n\n- Margherita ($10)\n- Pepperoni ($12)\n- Hawaiian ($12)\n- Veggie Supreme ($13)\n- Meat Lovers ($14)\n- BBQ Chicken ($13)\n\nAvailable in Small, Medium (+$2), or Large (+$4).\n\nWhich one sounds good?"
+      ]
+    },
+    {
+      "tag": "order_status",
+      "patterns": [
+        "\\b(where|what|how)('?s|\\s*is)?\\s*(my)?\\s*order\\b",
+        "\\border\\s*status\\b",
+        "\\b(check|track|find)\\s*(my)?\\s*order\\b",
+        "\\b(how\\s*long|when|eta)\\b.*\\b(order|pizza|ready)\\b",
+        "\\bis\\s*(my)?\\s*(order|pizza|food)\\s*(ready|done|coming)\\b"
+      ],
+      "responses": [
+        "Your {size} {item} pizza is being prepared, {name}. Should be ready in about 15-20 minutes!",
+        "Hi {name}! Your {size} {item} pizza is in the oven. About 15-20 minutes to go!",
+        "Good news, {name}! Your {size} {item} pizza is being made fresh. Expect it in 15-20 minutes.",
+        "{name}, your {size} {item} pizza is on track! Ready in about 15-20 minutes."
+      ],
+      "responses_no_order": [
+        "I can look up your order. What name is it under?",
+        "Let me check on that for you. What name is the order under?",
+        "Sure! What name did you place the order under?"
+      ],
+      "name_prompt_status": [
+        "What name is the order under?",
+        "And what name is that order under?",
+        "May I have the name on the order?"
+      ],
+      "responses_lookup": [
+        "Found it, {name}! Your order is being prepared. Should be ready in about 10-15 minutes!",
+        "Yes {name}, I see your order here! It's in the oven now. About 10-15 minutes to go!",
+        "Got it, {name}! Your pizza is on track. Expect it in around 10-15 minutes."
+      ]
+    },
+    {
+      "tag": "order",
+      "patterns": [
+        "\\b(i('?d|\\s*would)?\\s*like|i\\s*want|can\\s*i\\s*(get|have|order)|give\\s*me|let\\s*me\\s*(have|get))\\s+(?:a\\s+)?(?:one\\s+)?(?:(small|medium|large)\\s+)?(\\w+(?:\\s+\\w+)?)\\s*(pizza)?\\b",
+        "\\border\\s+(?:a\\s+)?(?:one\\s+)?(?:(small|medium|large)\\s+)?(\\w+(?:\\s+\\w+)?)\\s*(pizza)?\\b",
+        "\\b(one|a|1)\\s+(?:(small|medium|large)\\s+)?(\\w+(?:\\s+\\w+)?)\\s*(pizza)?\\s*please\\b",
+        "\\b(make|get)\\s+(it|that|me)\\s+(?:a\\s+)?(?:(small|medium|large)\\s+)?(\\w+(?:\\s+\\w+)?)\\b",
+        "\\b(i'?ll\\s*(have|take|get))\\s+(?:a\\s+)?(?:the\\s+)?(?:(small|medium|large)\\s+)?(\\w+(?:\\s+\\w+)?)\\b"
+      ],
+      "responses": [
+        "Order confirmed, {name}! One {size} {item} pizza for {price}. It'll be ready in 15-20 minutes!",
+        "Got it, {name}! Your {size} {item} pizza ({price}) is now being prepared!",
+        "Perfect! {size} {item} pizza for {name}, total {price}. We're firing up the oven!",
+        "{name}, your {size} {item} pizza is in the queue! Total: {price}. Ready in about 15-20 minutes."
+      ],
+      "extract": {
+        "item": ["margherita", "pepperoni", "hawaiian", "veggie supreme", "veggie", "meat lovers", "meat", "bbq chicken", "bbq"],
+        "size": ["small", "medium", "large"]
+      },
+      "name_prompt": [
+        "Great choice! What name should I put the order under?",
+        "Sounds delicious! And your name for the order?",
+        "Perfect! May I have your name please?"
+      ],
+      "confirm_item_prompt": [
+        "What type of pizza would you like? We have Margherita, Pepperoni, Hawaiian, Veggie Supreme, Meat Lovers, and BBQ Chicken.",
+        "Which pizza would you like? Options: Margherita, Pepperoni, Hawaiian, Veggie Supreme, Meat Lovers, or BBQ Chicken."
+      ],
+      "prices": {
+        "margherita": 10,
+        "pepperoni": 12,
+        "hawaiian": 12,
+        "veggie supreme": 13,
+        "veggie": 13,
+        "meat lovers": 14,
+        "meat": 14,
+        "bbq chicken": 13,
+        "bbq": 13
+      },
+      "size_modifiers": {
+        "small": 0,
+        "medium": 2,
+        "large": 4
+      }
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "^(exit|quit)$"
+      ],
+      "responses": [
+        "Thank you for your order, {name}! Enjoy your pizza!",
+        "Thanks for choosing Pizza Palace, {name}! See you next time!",
+        "Goodbye, {name}! Your pizza will be ready soon!",
+        "Thanks {name}! Enjoy your meal!"
+      ],
+      "responses_no_name": [
+        "Thank you for visiting Pizza Palace! Goodbye!",
+        "Thanks for stopping by! See you next time!",
+        "Goodbye! Come back soon for more pizza!",
+        "Take care! Thanks for visiting Pizza Palace!"
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": [
+        "I can help you view the menu, place a pizza order, or check your order status. What would you like?",
+        "I didn't catch that. Try 'show menu' or 'I'd like a pepperoni pizza'.",
+        "Sorry, I only handle pizza orders. Would you like to see the menu or place an order?",
+        "I'm not sure what you mean. I can show you our menu or take your pizza order."
+      ]
+    }
+  ]
+}
