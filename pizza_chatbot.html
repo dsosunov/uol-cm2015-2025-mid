@@ -7559,14 +7559,14 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
 <span class="k">try</span><span class="p">:</span>
-    <span class="kn">import</span> <span class="nn">nltk</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
     <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s1">'-m'</span><span class="p">,</span> <span class="s1">'pip'</span><span class="p">,</span> <span class="s1">'install'</span><span class="p">,</span> <span class="s1">'nltk'</span><span class="p">])</span>
-    <span class="kn">import</span> <span class="nn">nltk</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
 
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'punkt'</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'punkt_tab'</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -7611,15 +7611,15 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">string</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Any</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">string</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Any</span>
 
-<span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">PorterStemmer</span><span class="p">,</span> <span class="n">WordNetLemmatizer</span>
-<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
-<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.stem</span><span class="w"> </span><span class="kn">import</span> <span class="n">PorterStemmer</span><span class="p">,</span> <span class="n">WordNetLemmatizer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Libraries imported successfully!"</span><span class="p">)</span>
 </pre></div>
@@ -7763,7 +7763,7 @@ a.anchor-link {
     <span class="s1">'no_match_response'</span><span class="p">:</span> <span class="s2">"I'm sorry, I didn't understand that. Could you try rephrasing?"</span><span class="p">,</span>
 <span class="p">}</span>
 
-<span class="k">def</span> <span class="nf">load_intents</span><span class="p">(</span><span class="n">file_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"intents.json"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_intents</span><span class="p">(</span><span class="n">file_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"intents.json"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">"""Load intents from a JSON file."""</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -7884,39 +7884,39 @@ Loaded intents:
     <span class="s2">"wouldn't"</span><span class="p">:</span> <span class="s2">"would not"</span><span class="p">,</span> <span class="s2">"let's"</span><span class="p">:</span> <span class="s2">"let us"</span><span class="p">,</span>
 <span class="p">}</span>
 
-<span class="k">def</span> <span class="nf">expand_contractions</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">expand_contractions</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Expand contractions (e.g., \"I'd\" -&gt; \"I would\")."""</span>
     <span class="n">text_lower</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">contraction</span><span class="p">,</span> <span class="n">expansion</span> <span class="ow">in</span> <span class="n">CONTRACTIONS</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="n">text_lower</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">'\b'</span> <span class="o">+</span> <span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">contraction</span><span class="p">)</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">'\b'</span><span class="p">,</span> <span class="n">expansion</span><span class="p">,</span> <span class="n">text_lower</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">text_lower</span>
 
-<span class="k">def</span> <span class="nf">preprocess_text</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">preprocess_text</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Preprocess text for pattern matching using CONFIG settings.</span>
-<span class="sd">    </span>
+
 <span class="sd">    Steps: expand contractions -&gt; lowercase -&gt; remove punctuation -&gt; tokenize -&gt; stem</span>
 <span class="sd">    """</span>
     <span class="n">prep</span> <span class="o">=</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'preprocessing'</span><span class="p">]</span>
-    
+
     <span class="k">if</span> <span class="n">prep</span><span class="p">[</span><span class="s1">'expand_contractions'</span><span class="p">]:</span>
         <span class="n">text</span> <span class="o">=</span> <span class="n">expand_contractions</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">prep</span><span class="p">[</span><span class="s1">'lowercase'</span><span class="p">]:</span>
         <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">prep</span><span class="p">[</span><span class="s1">'remove_punctuation'</span><span class="p">]:</span>
         <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">'[^\w\s]'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="n">tokens</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-    
+
     <span class="k">if</span> <span class="n">prep</span><span class="p">[</span><span class="s1">'remove_stopwords'</span><span class="p">]:</span>
         <span class="n">important_words</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'i'</span><span class="p">,</span> <span class="s1">'my'</span><span class="p">,</span> <span class="s1">'me'</span><span class="p">,</span> <span class="s1">'want'</span><span class="p">,</span> <span class="s1">'like'</span><span class="p">,</span> <span class="s1">'order'</span><span class="p">,</span> <span class="s1">'have'</span><span class="p">,</span> <span class="s1">'get'</span><span class="p">,</span> <span class="s1">'can'</span><span class="p">,</span> <span class="s1">'could'</span><span class="p">,</span> <span class="s1">'would'</span><span class="p">}</span>
         <span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span> <span class="ow">or</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">important_words</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">prep</span><span class="p">[</span><span class="s1">'stem'</span><span class="p">]:</span>
         <span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">]</span>
-    
+
     <span class="k">return</span> <span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">tokenize_input</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">tokenize_input</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">"""Simple tokenization for word extraction."""</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">'[^\w\s]'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
@@ -7995,11 +7995,11 @@ Output: 'cannot you show me what you have got'
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">match_intent</span><span class="p">(</span><span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">intents_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="n">re</span><span class="o">.</span><span class="n">Match</span><span class="p">]]:</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">match_intent</span><span class="p">(</span><span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">intents_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="n">re</span><span class="o">.</span><span class="n">Match</span><span class="p">]]:</span>
 <span class="w">    </span><span class="sd">"""Match user input against intent patterns. Returns (intent, match) or (fallback, None)."""</span>
     <span class="n">clean_input</span> <span class="o">=</span> <span class="n">user_input</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
     <span class="n">regex_flags</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span> <span class="k">if</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'case_insensitive'</span><span class="p">]</span> <span class="k">else</span> <span class="mi">0</span>
-    
+
     <span class="k">for</span> <span class="n">intent</span> <span class="ow">in</span> <span class="n">intents_list</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">intent</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'fallback'</span><span class="p">:</span>
             <span class="k">continue</span>
@@ -8011,20 +8011,20 @@ Output: 'cannot you show me what you have got'
             <span class="k">except</span> <span class="n">re</span><span class="o">.</span><span class="n">error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Regex error in pattern '</span><span class="si">{</span><span class="n">pattern</span><span class="si">}</span><span class="s2">': </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
                 <span class="k">continue</span>
-    
+
     <span class="n">fallback</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">intents_list</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'fallback'</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fallback</span><span class="p">,</span> <span class="kc">None</span>
 
-<span class="k">def</span> <span class="nf">extract_order_details</span><span class="p">(</span><span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">extract_order_details</span><span class="p">(</span><span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">"""Extract order details (item, size) from user input."""</span>
     <span class="n">extracted</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'item'</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">'size'</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
-    
+
     <span class="k">if</span> <span class="ow">not</span> <span class="n">intent</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'extract'</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">extracted</span>
-    
+
     <span class="n">input_lower</span> <span class="o">=</span> <span class="n">user_input</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
     <span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenize_input</span><span class="p">(</span><span class="n">user_input</span><span class="p">)</span>
-    
+
     <span class="k">if</span> <span class="s1">'item'</span> <span class="ow">in</span> <span class="n">intent</span><span class="p">[</span><span class="s1">'extract'</span><span class="p">]:</span>
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">intent</span><span class="p">[</span><span class="s1">'extract'</span><span class="p">][</span><span class="s1">'item'</span><span class="p">]:</span>
             <span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">input_lower</span><span class="p">:</span>
@@ -8036,13 +8036,13 @@ Output: 'cannot you show me what you have got'
                 <span class="p">}</span>
                 <span class="n">extracted</span><span class="p">[</span><span class="s1">'item'</span><span class="p">]</span> <span class="o">=</span> <span class="n">item_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
                 <span class="k">break</span>
-    
+
     <span class="k">if</span> <span class="s1">'size'</span> <span class="ow">in</span> <span class="n">intent</span><span class="p">[</span><span class="s1">'extract'</span><span class="p">]:</span>
         <span class="k">for</span> <span class="n">size</span> <span class="ow">in</span> <span class="n">intent</span><span class="p">[</span><span class="s1">'extract'</span><span class="p">][</span><span class="s1">'size'</span><span class="p">]:</span>
             <span class="k">if</span> <span class="n">size</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
                 <span class="n">extracted</span><span class="p">[</span><span class="s1">'size'</span><span class="p">]</span> <span class="o">=</span> <span class="n">size</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
                 <span class="k">break</span>
-    
+
     <span class="k">return</span> <span class="n">extracted</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Pattern matching tests:"</span><span class="p">)</span>
@@ -8100,23 +8100,23 @@ Case insensitive: True
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">ConversationContext</span><span class="p">:</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ConversationContext</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Manages conversation state and order context.</span>
-<span class="sd">    </span>
+
 <span class="sd">    This class is the BUSINESS LOGIC INJECTION POINT - domain-specific operations</span>
 <span class="sd">    like pricing, validation, and order processing are implemented here, separate</span>
 <span class="sd">    from the conversational framework (intent matching, response generation).</span>
 <span class="sd">    """</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-    
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">customer_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_order</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">'item'</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> 
-            <span class="s1">'size'</span><span class="p">:</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'default_size'</span><span class="p">],</span> 
+            <span class="s1">'item'</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">'size'</span><span class="p">:</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'default_size'</span><span class="p">],</span>
             <span class="s1">'price'</span><span class="p">:</span> <span class="mi">0</span>
         <span class="p">}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">order_history</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
@@ -8125,36 +8125,36 @@ Case insensitive: True
         <span class="bp">self</span><span class="o">.</span><span class="n">pending_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">greeted</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">has_active_order</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
-    
-    <span class="k">def</span> <span class="nf">set_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">customer_name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
-    
-    <span class="k">def</span> <span class="nf">set_order</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_order</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_order</span><span class="p">[</span><span class="s1">'item'</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
         <span class="k">if</span> <span class="n">size</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">current_order</span><span class="p">[</span><span class="s1">'size'</span><span class="p">]</span> <span class="o">=</span> <span class="n">size</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">has_active_order</span> <span class="o">=</span> <span class="kc">True</span>
-    
+
     <span class="c1"># =========================================================================</span>
     <span class="c1"># BUSINESS LOGIC: Price calculation</span>
     <span class="c1"># This is where domain-specific pricing rules are applied.</span>
     <span class="c1"># In a production system, this would connect to a pricing service/database.</span>
     <span class="c1"># =========================================================================</span>
-    <span class="k">def</span> <span class="nf">calculate_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">calculate_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
         <span class="n">item</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_order</span><span class="p">[</span><span class="s1">'item'</span><span class="p">]</span>
         <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_order</span><span class="p">[</span><span class="s1">'size'</span><span class="p">]</span>
-        
+
         <span class="k">if</span> <span class="ow">not</span> <span class="n">item</span> <span class="ow">or</span> <span class="s1">'prices'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">intent</span><span class="p">:</span>
             <span class="k">return</span> <span class="mi">0</span>
-        
+
         <span class="n">base_price</span> <span class="o">=</span> <span class="n">intent</span><span class="p">[</span><span class="s1">'prices'</span><span class="p">][</span><span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
         <span class="n">size_mod</span> <span class="o">=</span> <span class="n">intent</span><span class="p">[</span><span class="s1">'size_modifiers'</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">size</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="mi">0</span><span class="p">)</span>
-        
+
         <span class="n">total</span> <span class="o">=</span> <span class="n">base_price</span> <span class="o">+</span> <span class="n">size_mod</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_order</span><span class="p">[</span><span class="s1">'price'</span><span class="p">]</span> <span class="o">=</span> <span class="n">total</span>
         <span class="k">return</span> <span class="n">total</span>
-    
-    <span class="k">def</span> <span class="nf">get_context_values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_context_values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">"""Prepare values for response template substitution."""</span>
         <span class="k">return</span> <span class="p">{</span>
             <span class="s1">'name'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">customer_name</span> <span class="ow">or</span> <span class="s1">'valued customer'</span><span class="p">,</span>
@@ -8207,17 +8207,17 @@ Case insensitive: True
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">generate_response</span><span class="p">(</span><span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">,</span> <span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">generate_response</span><span class="p">(</span><span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">,</span> <span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Generate a response based on matched intent and context."""</span>
     <span class="n">tag</span> <span class="o">=</span> <span class="n">intent</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span>
-    
+
     <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">awaiting</span> <span class="o">==</span> <span class="s1">'name'</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">handle_name_input</span><span class="p">(</span><span class="n">user_input</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">intent</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">awaiting</span> <span class="o">==</span> <span class="s1">'item'</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">handle_item_input</span><span class="p">(</span><span class="n">user_input</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">intent</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">awaiting</span> <span class="o">==</span> <span class="s1">'name_for_status'</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">handle_name_for_status</span><span class="p">(</span><span class="n">user_input</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-    
+
     <span class="k">if</span> <span class="n">tag</span> <span class="o">==</span> <span class="s1">'greeting'</span><span class="p">:</span>
         <span class="n">context</span><span class="o">.</span><span class="n">greeted</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">intent</span><span class="p">[</span><span class="s1">'responses'</span><span class="p">])</span>
@@ -8231,22 +8231,22 @@ Case insensitive: True
         <span class="k">return</span> <span class="n">handle_goodbye_intent</span><span class="p">(</span><span class="n">intent</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">tag</span> <span class="o">==</span> <span class="s1">'fallback'</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">intent</span><span class="p">[</span><span class="s1">'responses'</span><span class="p">])</span>
-    
+
     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">intent</span><span class="p">[</span><span class="s1">'responses'</span><span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">handle_name_input</span><span class="p">(</span><span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">,</span> <span class="n">order_intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">handle_name_input</span><span class="p">(</span><span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">,</span> <span class="n">order_intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Handle user providing their name."""</span>
     <span class="n">clean_input</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[^\w\s]"</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="n">user_input</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
     <span class="n">words</span> <span class="o">=</span> <span class="n">clean_input</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-    
+
     <span class="n">skip_words</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'my'</span><span class="p">,</span> <span class="s1">'name'</span><span class="p">,</span> <span class="s1">'is'</span><span class="p">,</span> <span class="s1">'i'</span><span class="p">,</span> <span class="s1">'am'</span><span class="p">,</span> <span class="s1">'call'</span><span class="p">,</span> <span class="s1">'me'</span><span class="p">,</span> <span class="s1">'it'</span><span class="p">,</span> <span class="s2">"it's"</span><span class="p">,</span> <span class="s1">'the'</span><span class="p">}</span>
     <span class="n">name_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">skip_words</span><span class="p">]</span>
-    
+
     <span class="n">max_words</span> <span class="o">=</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'max_name_words'</span><span class="p">]</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name_words</span><span class="p">[:</span><span class="n">max_words</span><span class="p">])</span><span class="o">.</span><span class="n">title</span><span class="p">()</span> <span class="k">if</span> <span class="n">name_words</span> <span class="k">else</span> <span class="n">clean_input</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
     <span class="n">context</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
     <span class="n">context</span><span class="o">.</span><span class="n">awaiting</span> <span class="o">=</span> <span class="kc">None</span>
-    
+
     <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">pending_item</span><span class="p">:</span>
         <span class="n">context</span><span class="o">.</span><span class="n">set_order</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">pending_item</span><span class="p">,</span> <span class="n">context</span><span class="o">.</span><span class="n">pending_size</span> <span class="ow">or</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'default_size'</span><span class="p">])</span>
         <span class="n">order_intent_obj</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">intents</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'order'</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
@@ -8256,37 +8256,37 @@ Case insensitive: True
         <span class="n">context</span><span class="o">.</span><span class="n">pending_size</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="n">values</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">get_context_values</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">order_intent_obj</span><span class="p">[</span><span class="s1">'responses'</span><span class="p">])</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">values</span><span class="p">)</span>
-    
+
     <span class="k">return</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'name_only_response'</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">handle_name_for_status</span><span class="p">(</span><span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">handle_name_for_status</span><span class="p">(</span><span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Handle user providing their name for order status lookup."""</span>
     <span class="n">clean_input</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[^\w\s]"</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="n">user_input</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
     <span class="n">words</span> <span class="o">=</span> <span class="n">clean_input</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-    
+
     <span class="n">skip_words</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'my'</span><span class="p">,</span> <span class="s1">'name'</span><span class="p">,</span> <span class="s1">'is'</span><span class="p">,</span> <span class="s1">'i'</span><span class="p">,</span> <span class="s1">'am'</span><span class="p">,</span> <span class="s1">'call'</span><span class="p">,</span> <span class="s1">'me'</span><span class="p">,</span> <span class="s1">'it'</span><span class="p">,</span> <span class="s2">"it's"</span><span class="p">,</span> <span class="s1">'the'</span><span class="p">,</span> <span class="s1">'under'</span><span class="p">}</span>
     <span class="n">name_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">skip_words</span><span class="p">]</span>
-    
+
     <span class="n">max_words</span> <span class="o">=</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'max_name_words'</span><span class="p">]</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name_words</span><span class="p">[:</span><span class="n">max_words</span><span class="p">])</span><span class="o">.</span><span class="n">title</span><span class="p">()</span> <span class="k">if</span> <span class="n">name_words</span> <span class="k">else</span> <span class="n">clean_input</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
     <span class="n">context</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
     <span class="n">context</span><span class="o">.</span><span class="n">awaiting</span> <span class="o">=</span> <span class="kc">None</span>
-    
+
     <span class="c1"># Simulate order lookup - in production this would query a database</span>
     <span class="n">status_intent</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">intents</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'order_status'</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">status_intent</span> <span class="ow">and</span> <span class="s1">'responses_lookup'</span> <span class="ow">in</span> <span class="n">status_intent</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">status_intent</span><span class="p">[</span><span class="s1">'responses_lookup'</span><span class="p">])</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-    
+
     <span class="k">return</span> <span class="sa">f</span><span class="s2">"Found it, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">! Your order is being prepared. Should be ready in about 10-15 minutes!"</span>
 
-<span class="k">def</span> <span class="nf">handle_item_input</span><span class="p">(</span><span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">,</span> <span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">handle_item_input</span><span class="p">(</span><span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">,</span> <span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Handle user providing pizza item when awaiting."""</span>
     <span class="n">order_intent</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">intents</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'order'</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">order_intent</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'order_error_message'</span><span class="p">]</span>
-    
+
     <span class="n">extracted</span> <span class="o">=</span> <span class="n">extract_order_details</span><span class="p">(</span><span class="n">user_input</span><span class="p">,</span> <span class="n">order_intent</span><span class="p">)</span>
-    
+
     <span class="k">if</span> <span class="n">extracted</span><span class="p">[</span><span class="s1">'item'</span><span class="p">]:</span>
         <span class="n">context</span><span class="o">.</span><span class="n">awaiting</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">context</span><span class="o">.</span><span class="n">customer_name</span><span class="p">:</span>
@@ -8294,47 +8294,47 @@ Case insensitive: True
             <span class="n">context</span><span class="o">.</span><span class="n">pending_size</span> <span class="o">=</span> <span class="n">extracted</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'size'</span><span class="p">,</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'default_size'</span><span class="p">])</span>
             <span class="n">context</span><span class="o">.</span><span class="n">awaiting</span> <span class="o">=</span> <span class="s1">'name'</span>
             <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">order_intent</span><span class="p">[</span><span class="s1">'name_prompt'</span><span class="p">])</span>
-        
+
         <span class="n">context</span><span class="o">.</span><span class="n">set_order</span><span class="p">(</span><span class="n">extracted</span><span class="p">[</span><span class="s1">'item'</span><span class="p">],</span> <span class="n">extracted</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'size'</span><span class="p">,</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'default_size'</span><span class="p">]))</span>
         <span class="n">context</span><span class="o">.</span><span class="n">calculate_price</span><span class="p">(</span><span class="n">order_intent</span><span class="p">)</span>
         <span class="n">values</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">get_context_values</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">order_intent</span><span class="p">[</span><span class="s1">'responses'</span><span class="p">])</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">values</span><span class="p">)</span>
-    
+
     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">order_intent</span><span class="p">[</span><span class="s1">'confirm_item_prompt'</span><span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">handle_order_intent</span><span class="p">(</span><span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">,</span> <span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">handle_order_intent</span><span class="p">(</span><span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">,</span> <span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Handle order placement intent."""</span>
     <span class="n">extracted</span> <span class="o">=</span> <span class="n">extract_order_details</span><span class="p">(</span><span class="n">user_input</span><span class="p">,</span> <span class="n">intent</span><span class="p">)</span>
-    
+
     <span class="k">if</span> <span class="ow">not</span> <span class="n">extracted</span><span class="p">[</span><span class="s1">'item'</span><span class="p">]:</span>
         <span class="n">context</span><span class="o">.</span><span class="n">awaiting</span> <span class="o">=</span> <span class="s1">'item'</span>
         <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">intent</span><span class="p">[</span><span class="s1">'confirm_item_prompt'</span><span class="p">])</span>
-    
+
     <span class="k">if</span> <span class="ow">not</span> <span class="n">context</span><span class="o">.</span><span class="n">customer_name</span><span class="p">:</span>
         <span class="n">context</span><span class="o">.</span><span class="n">pending_item</span> <span class="o">=</span> <span class="n">extracted</span><span class="p">[</span><span class="s1">'item'</span><span class="p">]</span>
         <span class="n">context</span><span class="o">.</span><span class="n">pending_size</span> <span class="o">=</span> <span class="n">extracted</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'size'</span><span class="p">,</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'default_size'</span><span class="p">])</span>
         <span class="n">context</span><span class="o">.</span><span class="n">awaiting</span> <span class="o">=</span> <span class="s1">'name'</span>
         <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">intent</span><span class="p">[</span><span class="s1">'name_prompt'</span><span class="p">])</span>
-    
+
     <span class="n">size</span> <span class="o">=</span> <span class="n">extracted</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'size'</span><span class="p">,</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'default_size'</span><span class="p">])</span>
     <span class="n">context</span><span class="o">.</span><span class="n">set_order</span><span class="p">(</span><span class="n">extracted</span><span class="p">[</span><span class="s1">'item'</span><span class="p">],</span> <span class="n">size</span><span class="p">)</span>
     <span class="n">context</span><span class="o">.</span><span class="n">calculate_price</span><span class="p">(</span><span class="n">intent</span><span class="p">)</span>
-    
+
     <span class="n">values</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">get_context_values</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">intent</span><span class="p">[</span><span class="s1">'responses'</span><span class="p">])</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">values</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">handle_status_intent</span><span class="p">(</span><span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">handle_status_intent</span><span class="p">(</span><span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Handle order status check intent."""</span>
     <span class="c1"># If user has active order in this session, show it</span>
     <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">has_active_order</span><span class="p">:</span>
         <span class="n">values</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">get_context_values</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">intent</span><span class="p">[</span><span class="s1">'responses'</span><span class="p">])</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">values</span><span class="p">)</span>
-    
+
     <span class="c1"># Otherwise, ask for name to look up order</span>
     <span class="n">context</span><span class="o">.</span><span class="n">awaiting</span> <span class="o">=</span> <span class="s1">'name_for_status'</span>
     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">intent</span><span class="p">[</span><span class="s1">'responses_no_order'</span><span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">handle_goodbye_intent</span><span class="p">(</span><span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">handle_goodbye_intent</span><span class="p">(</span><span class="n">intent</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ConversationContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Handle goodbye/exit intent."""</span>
     <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">customer_name</span><span class="p">:</span>
         <span class="n">values</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">get_context_values</span><span class="p">()</span>
@@ -8386,8 +8386,55 @@ Case insensitive: True
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Start the chatbot</span>
-<span class="n">run_chatbot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">run_chatbot</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">"""Main chatbot interaction loop. Type 'exit' or 'quit' to end."""</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span><span class="o">*</span><span class="mi">60</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"       Welcome to Pizza Palace Chatbot!"</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span><span class="o">*</span><span class="mi">60</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">I'm your virtual assistant for pizza ordering."</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"You can ask about our menu, place orders, or check order status."</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Type 'exit' or 'quit' to end the conversation.</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span><span class="o">*</span><span class="mi">60</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">context</span> <span class="o">=</span> <span class="n">ConversationContext</span><span class="p">()</span>
+
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">You: "</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">user_input</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Bot: </span><span class="si">{</span><span class="n">CONFIG</span><span class="p">[</span><span class="s1">'empty_input_message'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="k">continue</span>
+
+            <span class="c1"># Echo user input for logging</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"You: </span><span class="si">{</span><span class="n">user_input</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">user_input</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'exit'</span><span class="p">,</span> <span class="s1">'quit'</span><span class="p">]:</span>
+                <span class="n">goodbye_intent</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">intents</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'goodbye'</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">goodbye_intent</span><span class="p">:</span>
+                    <span class="n">response</span> <span class="o">=</span> <span class="n">handle_goodbye_intent</span><span class="p">(</span><span class="n">goodbye_intent</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Bot: </span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Bot: </span><span class="si">{</span><span class="n">CONFIG</span><span class="p">[</span><span class="s1">'fallback_goodbye'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span> <span class="s2">"="</span><span class="o">*</span><span class="mi">60</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"           Session Ended. Enjoy your pizza!"</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span><span class="o">*</span><span class="mi">60</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="k">break</span>
+
+            <span class="n">matched_intent</span><span class="p">,</span> <span class="n">match</span> <span class="o">=</span> <span class="n">match_intent</span><span class="p">(</span><span class="n">user_input</span><span class="p">,</span> <span class="n">intents</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">matched_intent</span><span class="p">:</span>
+                <span class="n">response</span> <span class="o">=</span> <span class="n">generate_response</span><span class="p">(</span><span class="n">matched_intent</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">user_input</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">response</span> <span class="o">=</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'no_match_response'</span><span class="p">]</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Bot: </span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n\n</span><span class="s2">Bot: </span><span class="si">{</span><span class="n">CONFIG</span><span class="p">[</span><span class="s1">'interrupt_goodbye'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">break</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Bot: </span><span class="si">{</span><span class="n">CONFIG</span><span class="p">[</span><span class="s1">'error_message'</span><span class="p">]</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">)"</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8400,16 +8447,14 @@ Case insensitive: True
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="9.-Start-the-Chatbot">9. Start the Chatbot<a class="anchor-link" href="#9.-Start-the-Chatbot">¶</a></h2><p>Run the cell below to start an interactive session with the Pizza Palace chatbot.</p>
-<p><strong>Instructions:</strong></p>
-<ul>
+<h2 id="9.-Start-the-Chatbot">9. Start the Chatbot<a class="anchor-link" href="#9.-Start-the-Chatbot">¶</a></h2><ul>
 <li>Type your message and press Enter</li>
 <li>Type <code>exit</code> or <code>quit</code> to end the session</li>
 </ul>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8417,9 +8462,45 @@ Case insensitive: True
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Start the chatbot</span>
-<span class="n">run_chatbot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">run_chatbot</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>============================================================
+       Welcome to Pizza Palace Chatbot!
+============================================================
+
+I'm your virtual assistant for pizza ordering.
+You can ask about our menu, place orders, or check order status.
+Type 'exit' or 'quit' to end the conversation.
+
+------------------------------------------------------------
+       Welcome to Pizza Palace Chatbot!
+============================================================
+
+I'm your virtual assistant for pizza ordering.
+You can ask about our menu, place orders, or check order status.
+Type 'exit' or 'quit' to end the conversation.
+
+------------------------------------------------------------
+You: hey
+Bot: Hi there! Welcome to Pizza Palace! Would you like to see our menu or place an order?
+You: quit
+Bot: Thanks for stopping by! See you next time!
+
+============================================================
+           Session Ended. Enjoy your pizza!
+============================================================
+</pre>
 </div>
 </div>
 </div>
@@ -8444,34 +8525,34 @@ Case insensitive: True
 <div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">run_test_conversation</span><span class="p">(</span><span class="n">test_inputs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">test_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"Test"</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">run_test_conversation</span><span class="p">(</span><span class="n">test_inputs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">test_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"Test"</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Run a test conversation with predefined inputs."""</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'='</span><span class="o">*</span><span class="mi">60</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  TEST CASE: </span><span class="si">{</span><span class="n">test_name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="s1">'='</span><span class="o">*</span><span class="mi">60</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    
+
     <span class="n">test_context</span> <span class="o">=</span> <span class="n">ConversationContext</span><span class="p">()</span>
-    
+
     <span class="k">for</span> <span class="n">user_input</span> <span class="ow">in</span> <span class="n">test_inputs</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">User: </span><span class="si">{</span><span class="n">user_input</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-        
+
         <span class="k">if</span> <span class="n">user_input</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'exit'</span><span class="p">,</span> <span class="s1">'quit'</span><span class="p">]:</span>
             <span class="n">goodbye_intent</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">intents</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'goodbye'</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
             <span class="n">response</span> <span class="o">=</span> <span class="n">handle_goodbye_intent</span><span class="p">(</span><span class="n">goodbye_intent</span><span class="p">,</span> <span class="n">test_context</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Bot: </span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"[Session ended]"</span><span class="p">)</span>
             <span class="k">break</span>
-        
+
         <span class="n">matched_intent</span><span class="p">,</span> <span class="n">match</span> <span class="o">=</span> <span class="n">match_intent</span><span class="p">(</span><span class="n">user_input</span><span class="p">,</span> <span class="n">intents</span><span class="p">)</span>
         <span class="n">intent_tag</span> <span class="o">=</span> <span class="n">matched_intent</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span> <span class="k">if</span> <span class="n">matched_intent</span> <span class="k">else</span> <span class="s1">'None'</span>
         <span class="n">response</span> <span class="o">=</span> <span class="n">generate_response</span><span class="p">(</span><span class="n">matched_intent</span><span class="p">,</span> <span class="n">test_context</span><span class="p">,</span> <span class="n">user_input</span><span class="p">)</span>
-        
+
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"[Intent: </span><span class="si">{</span><span class="n">intent_tag</span><span class="si">}</span><span class="s2">]"</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Bot: </span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-        
+
         <span class="k">if</span> <span class="n">test_context</span><span class="o">.</span><span class="n">customer_name</span> <span class="ow">or</span> <span class="n">test_context</span><span class="o">.</span><span class="n">has_active_order</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"[Context: name=</span><span class="si">{</span><span class="n">test_context</span><span class="o">.</span><span class="n">customer_name</span><span class="si">}</span><span class="s2">, order=</span><span class="si">{</span><span class="n">test_context</span><span class="o">.</span><span class="n">current_order</span><span class="p">[</span><span class="s1">'item'</span><span class="p">]</span><span class="si">}</span><span class="s2">, awaiting=</span><span class="si">{</span><span class="n">test_context</span><span class="o">.</span><span class="n">awaiting</span><span class="si">}</span><span class="s2">]"</span><span class="p">)</span>
-    
+
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'-'</span><span class="o">*</span><span class="mi">60</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">test_context</span>
 </pre></div>
@@ -8527,7 +8608,7 @@ Case insensitive: True
 
 User: Hello!
 [Intent: greeting]
-Bot: Hey! Thanks for choosing Pizza Palace! What can I get for you today?
+Bot: Greetings! I'm your Pizza Palace assistant. Ready to order a delicious pizza?
 
 User: What's on the menu?
 [Intent: menu]
@@ -8546,20 +8627,20 @@ Which one sounds good?
 
 User: I'd like a large pepperoni pizza
 [Intent: order]
-Bot: Sounds delicious! And your name for the order?
+Bot: Great choice! What name should I put the order under?
 
 User: John
 [Intent: fallback]
-Bot: Got it, John! Your Large Pepperoni pizza ($16.00) is now being prepared!
+Bot: John, your Large Pepperoni pizza is in the queue! Total: $16.00. Ready in about 15-20 minutes.
 [Context: name=John, order=Pepperoni, awaiting=None]
 
 User: Where is my order?
 [Intent: order_status]
-Bot: John, your Large Pepperoni pizza is on track! Ready in about 15-20 minutes.
+Bot: Your Large Pepperoni pizza is being prepared, John. Should be ready in about 15-20 minutes!
 [Context: name=John, order=Pepperoni, awaiting=None]
 
 User: exit
-Bot: Goodbye, John! Your pizza will be ready soon!
+Bot: Thank you for your order, John! Enjoy your pizza!
 [Session ended]
 
 ------------------------------------------------------------
@@ -8569,7 +8650,7 @@ Bot: Goodbye, John! Your pizza will be ready soon!
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>&lt;__main__.ConversationContext at 0x279dd947ad0&gt;</pre>
+<pre>&lt;__main__.ConversationContext at 0x1d3c8f00050&gt;</pre>
 </div>
 </div>
 </div>
@@ -8622,15 +8703,15 @@ Bot: Goodbye, John! Your pizza will be ready soon!
 
 User: Hey there!
 [Intent: greeting]
-Bot: Hello! Welcome to Pizza Palace! How can I help you today?
+Bot: Hey! Thanks for choosing Pizza Palace! What can I get for you today?
 
 User: Can I get a hawaiian pizza please
 [Intent: order]
-Bot: Perfect! May I have your name please?
+Bot: Great choice! What name should I put the order under?
 
 User: Sarah
 [Intent: fallback]
-Bot: Order confirmed, Sarah! One Medium Hawaiian pizza for $14.00. It'll be ready in 15-20 minutes!
+Bot: Got it, Sarah! Your Medium Hawaiian pizza ($14.00) is now being prepared!
 [Context: name=Sarah, order=Hawaiian, awaiting=None]
 
 User: Actually, I'll have a small margherita too
@@ -8640,11 +8721,11 @@ Bot: Sarah, your Small Margherita pizza is in the queue! Total: $10.00. Ready in
 
 User: How long until my order is ready?
 [Intent: order_status]
-Bot: Hi Sarah! Your Small Margherita pizza is in the oven. About 15-20 minutes to go!
+Bot: Your Small Margherita pizza is being prepared, Sarah. Should be ready in about 15-20 minutes!
 [Context: name=Sarah, order=Margherita, awaiting=None]
 
 User: quit
-Bot: Thanks for choosing Pizza Palace, Sarah! See you next time!
+Bot: Thanks Sarah! Enjoy your meal!
 [Session ended]
 
 ------------------------------------------------------------
@@ -8654,7 +8735,7 @@ Bot: Thanks for choosing Pizza Palace, Sarah! See you next time!
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>&lt;__main__.ConversationContext at 0x279dd9b2d50&gt;</pre>
+<pre>&lt;__main__.ConversationContext at 0x1d3c8eba610&gt;</pre>
 </div>
 </div>
 </div>
@@ -8726,18 +8807,19 @@ Which one sounds good?
 
 User: What pizza types do you have?
 [Intent: menu]
-Bot: Our delicious pizzas:
+Bot: Here's our pizza menu:
 
-- Margherita ($10)
-- Pepperoni ($12)
-- Hawaiian ($12)
-- Veggie Supreme ($13)
-- Meat Lovers ($14)
-- BBQ Chicken ($13)
+**Pizzas:**
+- Margherita ($10) - Classic tomato and mozzarella
+- Pepperoni ($12) - Loaded with pepperoni
+- Hawaiian ($12) - Ham and pineapple
+- Veggie Supreme ($13) - Bell peppers, mushrooms, olives, onions
+- Meat Lovers ($14) - Pepperoni, sausage, bacon, ham
+- BBQ Chicken ($13) - Grilled chicken with BBQ sauce
 
-Available in Small, Medium (+$2), or Large (+$4).
+**Sizes:** Small (+$0), Medium (+$2), Large (+$4)
 
-Which one sounds good?
+What would you like to order?
 
 User: Where is my order?
 [Intent: order_status]
@@ -8745,7 +8827,7 @@ Bot: I can look up your order. What name is it under?
 
 User: Mike
 [Intent: fallback]
-Bot: Yes Mike, I see your order here! It's in the oven now. About 10-15 minutes to go!
+Bot: Found it, Mike! Your order is being prepared. Should be ready in about 10-15 minutes!
 [Context: name=Mike, order=None, awaiting=None]
 
 User: exit
@@ -8759,7 +8841,7 @@ Bot: Thanks for choosing Pizza Palace, Mike! See you next time!
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>&lt;__main__.ConversationContext at 0x279dd971c10&gt;</pre>
+<pre>&lt;__main__.ConversationContext at 0x1d3c8eeb890&gt;</pre>
 </div>
 </div>
 </div>
@@ -8813,7 +8895,7 @@ Bot: Thanks for choosing Pizza Palace, Mike! See you next time!
 
 User: Greetings!
 [Intent: greeting]
-Bot: Greetings! I'm your Pizza Palace assistant. Ready to order a delicious pizza?
+Bot: Hey! Thanks for choosing Pizza Palace! What can I get for you today?
 
 User: What's the weather like?
 [Intent: menu]
@@ -8836,20 +8918,20 @@ Bot: Which pizza would you like? Options: Margherita, Pepperoni, Hawaiian, Veggi
 
 User: pepperoni
 [Intent: fallback]
-Bot: Sounds delicious! And your name for the order?
+Bot: Great choice! What name should I put the order under?
 
 User: Alex
 [Intent: fallback]
-Bot: Alex, your Medium Pepperoni pizza is in the queue! Total: $14.00. Ready in about 15-20 minutes.
+Bot: Perfect! Medium Pepperoni pizza for Alex, total $14.00. We're firing up the oven!
 [Context: name=Alex, order=Pepperoni, awaiting=None]
 
 User: order status
 [Intent: order_status]
-Bot: Hi Alex! Your Medium Pepperoni pizza is in the oven. About 15-20 minutes to go!
+Bot: Your Medium Pepperoni pizza is being prepared, Alex. Should be ready in about 15-20 minutes!
 [Context: name=Alex, order=Pepperoni, awaiting=None]
 
 User: exit
-Bot: Thanks Alex! Enjoy your meal!
+Bot: Thanks for choosing Pizza Palace, Alex! See you next time!
 [Session ended]
 
 ------------------------------------------------------------
@@ -8859,7 +8941,7 @@ Bot: Thanks Alex! Enjoy your meal!
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>&lt;__main__.ConversationContext at 0x279dd9729d0&gt;</pre>
+<pre>&lt;__main__.ConversationContext at 0x1d3c8eeaf50&gt;</pre>
 </div>
 </div>
 </div>
@@ -8923,26 +9005,26 @@ Bot: Thanks Alex! Enjoy your meal!
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">user_input</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">test5_inputs</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">[Turn </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">]"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Customer: </span><span class="si">{</span><span class="n">user_input</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    
+
     <span class="k">if</span> <span class="n">user_input</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'exit'</span><span class="p">,</span> <span class="s1">'quit'</span><span class="p">]:</span>
         <span class="n">goodbye_intent</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">intents</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'goodbye'</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
         <span class="n">response</span> <span class="o">=</span> <span class="n">handle_goodbye_intent</span><span class="p">(</span><span class="n">goodbye_intent</span><span class="p">,</span> <span class="n">test_context</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Bot: </span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">[SESSION ENDED]"</span><span class="p">)</span>
         <span class="k">break</span>
-    
+
     <span class="n">matched_intent</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">match_intent</span><span class="p">(</span><span class="n">user_input</span><span class="p">,</span> <span class="n">intents</span><span class="p">)</span>
     <span class="n">intent_tag</span> <span class="o">=</span> <span class="n">matched_intent</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span> <span class="k">if</span> <span class="n">matched_intent</span> <span class="k">else</span> <span class="s1">'None'</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">generate_response</span><span class="p">(</span><span class="n">matched_intent</span><span class="p">,</span> <span class="n">test_context</span><span class="p">,</span> <span class="n">user_input</span><span class="p">)</span>
-    
+
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"[Matched Intent: </span><span class="si">{</span><span class="n">intent_tag</span><span class="si">}</span><span class="s2">]"</span><span class="p">)</span>
-    
+
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">response</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">200</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Bot: </span><span class="si">{</span><span class="n">response</span><span class="p">[:</span><span class="mi">200</span><span class="p">]</span><span class="si">}</span><span class="s2">..."</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"     [Response truncated for display]"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Bot: </span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    
+
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"[Context State]"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  - Customer Name: </span><span class="si">{</span><span class="n">test_context</span><span class="o">.</span><span class="n">customer_name</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s1">'(not set)'</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  - Current Order: </span><span class="si">{</span><span class="n">test_context</span><span class="o">.</span><span class="n">current_order</span><span class="p">[</span><span class="s1">'item'</span><span class="p">]</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s1">'(none)'</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">test_context</span><span class="o">.</span><span class="n">current_order</span><span class="p">[</span><span class="s1">'size'</span><span class="p">]</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
@@ -8974,7 +9056,7 @@ Bot: Thanks Alex! Enjoy your meal!
 [Turn 1]
 Customer: Hi there!
 [Matched Intent: greeting]
-Bot: Hello! Welcome to Pizza Palace! How can I help you today?
+Bot: Hi there! Welcome to Pizza Palace! Would you like to see our menu or place an order?
 [Context State]
   - Customer Name: (not set)
   - Current Order: (none) (Medium)
@@ -9014,7 +9096,7 @@ Bot: Which pizza would you like? Options: Margherita, Pepperoni, Hawaiian, Veggi
 [Turn 4]
 Customer: I'll take a large pepperoni
 [Matched Intent: order]
-Bot: Perfect! May I have your name please?
+Bot: Sounds delicious! And your name for the order?
 [Context State]
   - Customer Name: (not set)
   - Current Order: (none) (Medium)
@@ -9025,7 +9107,7 @@ Bot: Perfect! May I have your name please?
 [Turn 5]
 Customer: My name is Maria Garcia
 [Matched Intent: fallback]
-Bot: Perfect! Large Pepperoni pizza for Maria Garcia, total $16.00. We're firing up the oven!
+Bot: Maria Garcia, your Large Pepperoni pizza is in the queue! Total: $16.00. Ready in about 15-20 minutes.
 [Context State]
   - Customer Name: Maria Garcia
   - Current Order: Pepperoni (Large)
@@ -9036,7 +9118,7 @@ Bot: Perfect! Large Pepperoni pizza for Maria Garcia, total $16.00. We're firing
 [Turn 6]
 Customer: How long until my pizza is ready?
 [Matched Intent: order_status]
-Bot: Maria Garcia, your Large Pepperoni pizza is on track! Ready in about 15-20 minutes.
+Bot: Good news, Maria Garcia! Your Large Pepperoni pizza is being made fresh. Expect it in 15-20 minutes.
 [Context State]
   - Customer Name: Maria Garcia
   - Current Order: Pepperoni (Large)
@@ -9047,7 +9129,7 @@ Bot: Maria Garcia, your Large Pepperoni pizza is on track! Ready in about 15-20 
 [Turn 7]
 Customer: I'd also like a small Hawaiian please
 [Matched Intent: order]
-Bot: Order confirmed, Maria Garcia! One Small Hawaiian pizza for $12.00. It'll be ready in 15-20 minutes!
+Bot: Perfect! Small Hawaiian pizza for Maria Garcia, total $12.00. We're firing up the oven!
 [Context State]
   - Customer Name: Maria Garcia
   - Current Order: Hawaiian (Small)
@@ -9058,7 +9140,7 @@ Bot: Order confirmed, Maria Garcia! One Small Hawaiian pizza for $12.00. It'll b
 [Turn 8]
 Customer: Where's my order now?
 [Matched Intent: order_status]
-Bot: Hi Maria Garcia! Your Small Hawaiian pizza is in the oven. About 15-20 minutes to go!
+Bot: Good news, Maria Garcia! Your Small Hawaiian pizza is being made fresh. Expect it in 15-20 minutes.
 [Context State]
   - Customer Name: Maria Garcia
   - Current Order: Hawaiian (Small)
@@ -9069,7 +9151,7 @@ Bot: Hi Maria Garcia! Your Small Hawaiian pizza is in the oven. About 15-20 minu
 [Turn 9]
 Customer: Do you deliver to my area?
 [Matched Intent: fallback]
-Bot: I'm not sure what you mean. I can show you our menu or take your pizza order.
+Bot: I can help you view the menu, place a pizza order, or check your order status. What would you like?
 [Context State]
   - Customer Name: Maria Garcia
   - Current Order: Hawaiian (Small)
@@ -9097,7 +9179,7 @@ Bot: Here's our pizza menu:
 
 [Turn 11]
 Customer: exit
-Bot: Thank you for your order, Maria Garcia! Enjoy your pizza!
+Bot: Thanks Maria Garcia! Enjoy your meal!
 
 [SESSION ENDED]
 
